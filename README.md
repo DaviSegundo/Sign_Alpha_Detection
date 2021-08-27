@@ -4,8 +4,64 @@ Projeto de detecção das letras do alfabeto de libras usando o **TensorFlow** p
 
 
 ## Exemplo das letras do alfabeto:
+
+<p align='center'>
+    <img src='./docs/american_sign_language.PNG' height=400>
+</p>
+
+Para esse projeto não iremos trabalhar com algumas letras em específico, como o "J" e o "Z", que na linguagem de sinais são representados por um movimento e não por uma posição estática.
+
 <p align='center'>
     <img src='./docs/amer_sign2.png' height=450>
 </p>
 
-Para esse projeto não iremos trabalhar com algumas letras em específico, como o "J", que na linguagem de sinais é representado por um movimento e não por uma posição estática.
+## Rede Neural Convolucional (CNN)
+
+A arquitetura da rede que vai ser utilizada nesse projeto consiste de uma serie de camadas covolucionais para a detecção de features importantes de cada imagem.
+
+
+### Dados do treinamento
+
+É possível perceber que a rede conseguiu identificar rapidamente as features mais importantes e foi melhorando a função custo e a acurácia constantemente.
+
+<p align='center'>
+    <img src='./models/training_data.png' height=650>
+</p>
+
+Vale destacar que o callback de redução do learning rate foi ativado uma vez perto final do treinamento, o que contribuiu consideralvemnte para a melhora da acurácia do modelo, fazendo ele conseguir atingir os 99% e assim, parando o treinamento previamente.
+
+Ao final do treinamento os seguintes gráficos foram obtidos.
+
+<p align='center'>
+    <img src='./models/train_per_epochs.png'>
+</p>
+
+Além disso, vale destacar algumas métricas importantes para a validação do modelo.
+
+#### Confusion Matrix
+
+<p align='center'>
+    <img src='./docs/confusion_matrix.png' height=650>
+</p>
+
+As taxas de acerto das predições corretas estão bem altas e os casos em que foi observados mais erros são de letras que realmente tem muita semelhança.
+
+#### Classification Report
+
+<p align='center'>
+    <img src='./docs/class_report.png' >
+</p>
+
+#### Análise de Casos Corretos e Incorretos
+
+##### Casos Corretos
+
+<p align='center'>
+    <img src='./docs/correct.png' >
+</p>
+
+##### Casos Incorretos
+
+<p align='center'>
+    <img src='./docs/wrong.png' >
+</p>
