@@ -57,11 +57,29 @@ As taxas de acerto das predições corretas estão bem altas e os casos em que f
 ##### Casos Corretos
 
 <p align='center'>
-    <img src='./docs/correct.png' >
+    <img src='./docs/correct.png' height=300>
 </p>
 
 ##### Casos Incorretos
 
 <p align='center'>
-    <img src='./docs/wrong.png' >
+    <img src='./docs/wrong.png' height=300>
 </p>
+
+É possível perceber que o modelo ficou bem construido e que está errando muito pouco.
+
+## Predição em Tempo Real
+
+Para isso vamos construir um programa para capturar a imagem e realizar o tratamento, utilizando **OpenCV**.
+
+### Exemplos de predições feitas em tempo real.
+<div class="row">
+  <div class="column" align='center'>
+    <img src="./docs/real_time_pred.png" height=300>
+    <img src="./docs/real_time_pred2.png" height=300>
+    <img src="./docs/real_time_pred3.png" height=300>
+    <img src="./docs/real_time_pred4.png" height=300>
+  </div>
+</div>
+
+
